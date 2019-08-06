@@ -1,0 +1,8 @@
+<form class="form-number-one" #myForm="ngForm" (submit)="tratarNumero(myForm)">
+    <p>Insira um valor</p>
+    <label>        
+    <input type="text" name="palindromo" [(ngModel)]="infoPalindromo.valor">
+    </label>
+    <button type="submit">Executar</button> 
+    {{ infoPalindromo.valor }}
+</form>
