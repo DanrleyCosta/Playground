@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,15 +9,15 @@ export class ServCepService {
 
   constructor(private http: HttpClient) { }
 
-  Cep(cep: string){
-    cep = this.endereco.get('endereco.cep').value;
-
-    cep =cep.replace(/\D/g,'');
-    if(cep !== ''){
-      cont validacep = /^[0-9]{8}$/;
+  consultaCEP(cep: string) {
+    console.log(cep);   
+    cep = cep.replace(/\D/g, '');
+    if (cep !== '') {
+      const validacep = /^[0-9]{8}$/;
+      if (validacep.test(cep)) {
+        return this.http.get(`//viacep.com.br/ws/${cep}/json`);
+      }
     }
-    if(validacep){
-      this.http.get('//viacep.com.br/ws/${cep}/json');
-    }
+    return of({});
   }
 }

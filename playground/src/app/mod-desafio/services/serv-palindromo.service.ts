@@ -23,7 +23,7 @@ export class ServPalindromoService {
    */
   comparaPalindromo(valorMax: String): any {
 
-    let arrayPalindromo = [];
+    let arrayPalindromo = '';
     let inverter, cont = 0;
 
     for (var i = 0; i < Number(valorMax); i++) {
@@ -31,7 +31,7 @@ export class ServPalindromoService {
       //  inversão atraves de uma Arrow function
       inverter = inverter => inverter.split().reverse().join();
       if (inverter === i || inverter < 10) {
-        arrayPalindromo[cont] = i;
+        arrayPalindromo += i + " ";
         cont++;
       }
     }

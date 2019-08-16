@@ -1,0 +1,63 @@
+.main-header {
+    position: relative;
+}
+
+#myh {
+    color: grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#myInput {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #3b3b3b;
+    z-index: 100;
+}
+
+.navigation-list {
+    padding: 0;
+}
+
+.navigation-list-item {
+    display: inline-block;
+    padding: 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.nav-link:hover {
+    color: #0079d0;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+}
+
+.main-footer {
+    position: relative;
+    padding: 10px;
+}
+
+.footer-section {
+    display: inline-block;
+    width: 32%;
+    min-width: 230px;
+    vertical-align: top;
+}

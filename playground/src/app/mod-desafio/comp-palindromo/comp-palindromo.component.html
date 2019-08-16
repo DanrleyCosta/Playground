@@ -1,8 +1,39 @@
-<form class="form-number-one" #myForm="ngForm" (submit)="tratarNumero(myForm)">
-    <p>Insira um valor</p>
-    <label>        
-    <input type="text" name="palindromo" [(ngModel)]="infoPalindromo.valor">
+<header class="main-header">
+    <video class="header-video"></video>
+    <nav class="navigation">
+        <ul class="navigation-list">
+            <li class="navigation-list-item">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="nav-link" href="">Palindromo</a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="nav-link" href="">Notas</a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="nav-link" href="">Veiculo</a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="nav-link" href="">CEP</a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="nav-link" href="">Informativos UX/UI</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<form class="form-number-one" #myForm="ngForm" (submit)="tratarNumero()">
+    <label>
+        <h1 class="title" id="myh" >Insira um valor</h1>
+        <input id="myInput" type="text" name="palindromo1" [(ngModel)]="infoPalindromo.Palindromo">
     </label>
-    <button type="submit">Executar</button> 
-    {{ infoPalindromo.valor }}
+    <br>
+    <button type="submit">Executar</button>
+    <br>
+    <div>
+        {{ infoPalindromo.auxiliar }}
+    </div>
+
+
 </form>
